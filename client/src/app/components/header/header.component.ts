@@ -8,7 +8,7 @@ import {MatToolbarModule} from "@angular/material";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  title="ProConnect";
   constructor(private router:Router){}
 
   ngOnInit() {

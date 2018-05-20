@@ -32,6 +32,13 @@ public class UserController {
         UserModel userModel = mongoConfig.mongoTemplate().findOne(Query.query(Criteria.where("username").is(username)),UserModel.class);
         return  userModel;
     }
+
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    public List<UserModel> getAllUserDetails() throws Exception {
+        MongoConfig mongoConfig=new MongoConfig();
+        return mongoConfig.mongoTemplate().findAll(UserModel.class,"userInfo");
+
+    }
 }
 
 

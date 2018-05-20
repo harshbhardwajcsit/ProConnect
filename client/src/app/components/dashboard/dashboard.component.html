@@ -1,1 +1,12 @@
-
+<html>
+<div>
+  <div layout="column" *ngFor="let category of experimentCategories">
+    <mat-card class="CategoryCard">
+      <img mat-card-image src="demo/client/src/assets/images/ai.jpg">
+      <mat-card-content>
+        {{category.displayName}}
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+</html>

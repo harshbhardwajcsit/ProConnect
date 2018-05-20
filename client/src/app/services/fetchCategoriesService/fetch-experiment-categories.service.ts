@@ -3,13 +3,11 @@ import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {Observable} from "rxjs/index";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class FetchExperimentCategoriesService {
 
   constructor(private http: HttpClient,private router:Router) { }
   fetchCategories():Observable<any>{
-    return this.http.get('api/dashboard');
+    return this.http.get<any>('api/dashboard/category');
   }
 }

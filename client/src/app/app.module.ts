@@ -6,6 +6,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {RouterModule} from "@angular/router";
 import { HeaderComponent } from './components/header/header.component';
 import {AppMaterialModule} from "./app.material.module";
+import {FetchExperimentCategoriesService} from "./services/fetchCategoriesService/fetch-experiment-categories.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import {AppMaterialModule} from "./app.material.module";
   imports: [
     BrowserModule,
     AppMaterialModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path:'',
@@ -28,7 +31,7 @@ import {AppMaterialModule} from "./app.material.module";
     ])
   ],
 
-  providers: [],
+  providers: [FetchExperimentCategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,6 +11,8 @@ import java.io.Serializable;
 
 public class ProjectModel implements Serializable{
 
+    private String tag;
+
     private String title;
 
     private String description;
@@ -24,7 +26,5 @@ public class ProjectModel implements Serializable{
     private String videoUrl;
 
     private String repository;
-
-
 
 }
