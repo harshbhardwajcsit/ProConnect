@@ -1,11 +1,11 @@
 package com.example.sample.project.demo.models;
-
 import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.io.Serializable;
+import java.util.List;
 
 @Document(collection = "userInfo")
 public final class UserModel implements Serializable {
@@ -34,11 +34,6 @@ public final class UserModel implements Serializable {
     }
 
 
-    @Override
-    public String toString() {
-        return "UserModel [email=" + email + ", userName=" + userName+"]";
-    }
-
     private String password;
 
     private String country;
@@ -59,7 +54,18 @@ public final class UserModel implements Serializable {
 
     private String other;
 
-//    private ProjectModel[] projects;
+    private List<ProjectModel> projects;
+
+
+    @Override
+    public String toString() {
+        return "UserModel [email=" + email + ", userName=" + userName + ", country=" + country +
+        ", state=" + state +", subContinent=" + subContinent + ", Education=" + Education +
+                ", branch=" + branch + ", linkdenAccount=" + linkdenAccount +
+                ", githubAccount=" + githubAccount + ", portfolio=" + portfolio +
+                ", other=" + other + ", projects=" + projects +
+                "]";
+    }
 
 
 }

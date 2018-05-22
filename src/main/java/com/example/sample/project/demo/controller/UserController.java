@@ -1,6 +1,6 @@
 package com.example.sample.project.demo.controller;
 
-import com.example.sample.project.demo.MongoConfig;
+import com.example.sample.project.demo.Configurations.MongoConfig;
 import com.example.sample.project.demo.models.UserModel;
 import com.example.sample.project.demo.repositories.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,20 +23,20 @@ public class UserController {
         UserModel userModel=new UserModel();
         userModel.setUserName(username);
         MongoConfig mongoConfig=new MongoConfig();
-        mongoConfig.mongoTemplate().insert(userModel,"userInfo");
+        mongoConfig.mongoOperations().insert(userModel,"userInfo");
     }
 
     @RequestMapping(value = "{username}", method = RequestMethod.GET)
     public UserModel getCurrentUserDetails(@PathVariable("username") String username) throws Exception {
         MongoConfig mongoConfig=new MongoConfig();
-        UserModel userModel = mongoConfig.mongoTemplate().findOne(Query.query(Criteria.where("username").is(username)),UserModel.class);
+        UserModel userModel = mongoConfig.mongoOperations().findOne(Query.query(Criteria.where("userName").is(username)),UserModel.class);
         return  userModel;
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<UserModel> getAllUserDetails() throws Exception {
         MongoConfig mongoConfig=new MongoConfig();
-        return mongoConfig.mongoTemplate().findAll(UserModel.class,"userInfo");
+        return mongoConfig.mongoOperations().findAll(UserModel.class,"userInfo");
 
     }
 }

@@ -8,12 +8,15 @@ import { HeaderComponent } from './components/header/header.component';
 import {AppMaterialModule} from "./app.material.module";
 import {FetchExperimentCategoriesService} from "./services/fetchCategoriesService/fetch-experiment-categories.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {ExperimentsNameComponent} from "./components/experiments-name/experiments-name.component";
+import {FetchExperimentsWithTagService} from "./services/fetchExperimentsWithTag/fetch-experiments-with-tag.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    ExperimentsNameComponent
   ],
   imports: [
     BrowserModule,
@@ -28,10 +31,14 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
         path:'dashboard',
         component:DashboardComponent
       }
+      ,{
+        path:'experiments',
+        component:ExperimentsNameComponent
+      }
     ])
   ],
 
-  providers: [FetchExperimentCategoriesService],
+  providers: [FetchExperimentCategoriesService,FetchExperimentsWithTagService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
