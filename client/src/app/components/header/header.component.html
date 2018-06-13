@@ -1,3 +1,12 @@
-<mat-toolbar>
-   <h3>{{title}}</h3>
+<mat-toolbar class="toolbar">
+<mat-toolbar-row>
+  <span class="title">{{title}}</span>
+  <span class="example-spacer"></span>
+  <mat-button class="addExperiment" (click)="addNewExperiment()">
+    Submit Experiment
+  </mat-button>
+  <mat-button class="signIn" (click)="userSignIn()">
+    Sign in
+  </mat-button>
+</mat-toolbar-row>
 </mat-toolbar>

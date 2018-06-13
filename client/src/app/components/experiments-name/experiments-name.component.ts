@@ -9,6 +9,7 @@ import {parseHttpResponse} from "selenium-webdriver/http";
 })
 export class ExperimentsNameComponent implements OnInit {
   currentExperimentTag='';
+  experiments=[];
   constructor(private fetchExperimentsWithTagService:FetchExperimentsWithTagService) { }
 
   ngOnInit() {
@@ -16,6 +17,7 @@ export class ExperimentsNameComponent implements OnInit {
     console.log(this.currentExperimentTag);
     this.fetchExperimentsWithTagService.getExperimentsWithTag().subscribe(responseData=>{
       console.log("projects with tag",responseData);
+      this.experiments=responseData;
     },err=>{
       console.log(err);
     })

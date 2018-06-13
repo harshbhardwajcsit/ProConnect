@@ -1,0 +1,79 @@
+.exp-form {
+  width: 100%;
+}
+.recommendations{
+  position: relative;
+  padding: 50px;
+}
+.mat-card{
+  color: aliceblue;
+  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+  display: block;
+  position: relative;
+  padding: 36px;
+  border-radius: 2px;
+}
+.full-width {
+  width: 100%;
+}
+
+table {
+  width: 550px;
+}
+
+th {
+  text-align: left;
+}
+
+td, th {
+  padding-left: 15px;
+}
+
+.classificationSelection{
+  margin-top: 15px;
+}
+
+.classificationSelection label {
+  padding: 5px;
+}
+
+.classificationCtrl {
+  display: flex;
+  flex-flow: row-reverse;
+}
+
+.classificationCtrl button {
+  margin: 5px;
+}
+
+
+.mat-dialog-container {
+  height: 100px;
+}
+
+.mat-dialog-actions{
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  outline-color: initial;
+  outline-style: initial;
+  outline-width: 0px;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin: 31px;
+  min-width: 149px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 2px;
+  overflow: visible;
+}

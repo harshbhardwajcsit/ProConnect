@@ -1,6 +1,6 @@
 package com.example.sample.project.demo.controller;
 
-import com.example.sample.project.demo.Configurations.MongoConfig;
+import com.example.sample.project.demo.webConfigurations.MongoConfig;
 import com.example.sample.project.demo.models.UserModel;
 import com.example.sample.project.demo.repositories.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

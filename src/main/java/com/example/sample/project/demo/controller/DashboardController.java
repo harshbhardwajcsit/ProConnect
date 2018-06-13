@@ -1,9 +1,7 @@
 package com.example.sample.project.demo.controller;
 
-import com.example.sample.project.demo.Configurations.MongoConfig;
+import com.example.sample.project.demo.webConfigurations.MongoConfig;
 import com.example.sample.project.demo.models.ExperimentsCategory;
-import com.example.sample.project.demo.repositories.DashboardDataRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,7 +17,10 @@ public class DashboardController {
         return mongoConfig.mongoOperations().findAll(ExperimentsCategory.class,"experiment_category");
 
     }
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    public void userLoginIn() throws Exception{
 
+    }
 
 
 }

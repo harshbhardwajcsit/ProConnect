@@ -1,3 +1,13 @@
-<p>
-{{tag}}
-</p>
+<html>
+<div class="cardsGrid" *ngFor="let experiment of experiments">
+  <mat-card>
+    <mat-card-title>
+      {{experiment.title}}
+    </mat-card-title>
+    <mat-card-content>
+      {{experiment.description}}
+    </mat-card-content>
+  </mat-card>
+
+</div>
+</html>

@@ -1,0 +1,77 @@
+<h3 mat-dialog-title align="center">*New Experiment</h3>
+<div class="recommendations">
+  <p> <b>Innovation. </b>  This world is looking for the great things you have develop, so build products not just projects.</p>
+  <p> <b>Open-source.</b> Open-sourcing your experiment, can inspire other coders.</p>
+  <p> <b>Amaze Us.   </b>Community is activily looking for what amazing you are developing</p>
+</div>
+<mat-card class="exp-card">
+  <form class="exp-form">
+    <div class="full-group">
+      <mat-form-field class="full-width">
+        <input matInput type="text" class="form-control" id="title" required placeholder="Title of Experiment"
+               name="title">
+        <!--<mat-error>Already in system. Use new Title</mat-error>-->
+        <!--<mat-hint>Available</mat-hint>-->
+      </mat-form-field>
+    </div>
+
+    <div class="full-group">
+      <mat-form-field class="full-width">
+        <input matInput type="text" class="form-control" id="description" required placeholder="Description of Experiment"
+               name="description">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="full-group">
+        <mat-select class="form-control" id="Catergory"  placeholder="Choose Catergory" name="Catergory" >
+          <mat-option *ngFor="let category of experimentCategories" value="{{category.displayName}}">
+            {{category.displayName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="full-group">
+      <mat-form-field class="full-width">
+        <input matInput type="text" class="form-control" id="my-story" required placeholder="What's your project story"
+               name="my-story">
+      </mat-form-field>
+    </div>
+
+    <div class="full-group">
+      <mat-form-field class="full-width">
+        <input matInput type="text" class="form-control" id="project-url" required placeholder="URL"
+               name="project-url">
+      </mat-form-field>
+    </div>
+
+    <div class="full-group">
+      <mat-form-field class="full-width">
+        <input matInput type="text" class="form-control" id="youtube-url" required placeholder="Youtube Link"
+               name="project-url">
+      </mat-form-field>
+    </div>
+
+    <div class="full-group">
+      <mat-form-field class="full-width">
+        <input matInput type="text" class="form-control" id="repository" required placeholder="Source code"
+               name="repository">
+      </mat-form-field>
+    </div>
+
+    <div class="full-group">
+      <mat-form-field class="full-width">
+        <input matInput type="text" class="form-control" id="screenshots" required placeholder="Screen shots"
+               name="screenshots">
+      </mat-form-field>
+    </div>
+
+    <mat-dialog-actions>
+      <button type="button" mat-button color="primary">
+        Save
+      </button>
+    </mat-dialog-actions>
+  </form>
+</mat-card>
+
+

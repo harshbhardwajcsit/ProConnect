@@ -1,6 +1,6 @@
 package com.example.sample.project.demo.controller;
 
-import com.example.sample.project.demo.Configurations.MongoConfig;
+import com.example.sample.project.demo.webConfigurations.MongoConfig;
 import com.example.sample.project.demo.models.ProjectModel;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -21,4 +21,22 @@ public class ExperimentController {
         query.addCriteria(Criteria.where("tag").is(tag));
        return mongoConfig.mongoOperations().find(query,ProjectModel.class);
     }
+
+    @RequestMapping(value = "title/{title}")
+    public ProjectModel getProjectWithTitle(@PathVariable("title") String title){
+        MongoConfig mongoConfig=new MongoConfig();
+        ProjectModel projectModel=new ProjectModel();
+
+        Query query = new Query();
+        System.out.println(title);
+        query.addCriteria(Criteria.where("title").is(title));
+        try {
+            projectModel=mongoConfig.mongoOperations().findOne(query,ProjectModel.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return projectModel;
+
+    }
+
 }

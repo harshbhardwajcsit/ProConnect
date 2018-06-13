@@ -18,7 +18,11 @@ public class ProjectModel implements Serializable {
 
     private String tag;
 
+    private String category;
+
     private String createdBy;
+
+    private String createdOn;
 
     private String title;
 
@@ -47,8 +51,16 @@ public class ProjectModel implements Serializable {
         this.tag=tag;
     }
 
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public void setCreatedBy(String createdBy){
         this.createdBy=createdBy;
+    }
+
+    public void setCreatedOn(String createdOn) {
+        this.createdOn = createdOn;
     }
 
     public void setTitle(String title){
@@ -100,8 +112,16 @@ public class ProjectModel implements Serializable {
         return tag;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     public String getCreatedBy(){
         return createdBy;
+    }
+
+    public String getCreatedOn() {
+        return createdOn;
     }
 
     public String getTitle(){
@@ -150,7 +170,7 @@ public class ProjectModel implements Serializable {
 
     @Override
     public String toString() {
-        return "ProjectModel [tag=" + tag + ", createdBy=" + createdBy + ", title=" + title +
+        return "ProjectModel [tag=" + tag + ", createdBy=" + createdBy + ", title=" + title + ",createdOn=" + createdOn +
                 ", description=" + description + ", thumbnail=" + thumbnail + ", myStory=" + myStory +
                 ", projectUrl=" + projectUrl + ", videoUrl=" + videoUrl +
                 ", repository=" + repository + ", contributors=" + contributors +

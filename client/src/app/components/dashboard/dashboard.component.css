@@ -1,11 +1,19 @@
-/*.example-card {*/
-  /*max-width: 400px;*/
+/*.actionCategory{*/
+  /*margin-bottom: 0px;*/
+  /*color: green;*/
+  /*font-size: 16px;*/
+
+/*}*/
+/*.container {*/
+  /*background: lightyellow;*/
+  /*width: 500px;*/
 /*}*/
 
-/*.example-header-image {*/
-  /*background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');*/
-  /*background-size: cover;*/
+/*.new {*/
+  /*background: lightblue;*/
+  /*width: 100px;*/
 /*}*/
+
 
 /**
  * Copyright 2015 Google Inc. All Rights Reserved.
@@ -184,7 +192,6 @@ a img{
   height: 800px;
   width: auto;
   background-color: #f3f3f3;
-  background: url('/client/dist/client/assets/images/slide01.jpg'), center 30% no-repeat;
   background-size: cover;
 }
 
@@ -311,7 +318,6 @@ a img{
 
 .android-wear-section {
   position: relative;
-  background: url('/client/src/assets/images/wear.png') center top no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -382,7 +388,7 @@ a img{
 }
 
 .android-customized-section-image {
-  background: url('/client/src/assets/images/devices.jpg') center top no-repeat;
+
   background-size: cover;
   height: 400px;
 }
@@ -548,5 +554,8 @@ a img{
   .android-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
-}
 
+  .awesomeSlider{
+
+  }
+}
