@@ -4,6 +4,7 @@ import com.example.sample.project.demo.webConfigurations.MongoConfig;
 import com.example.sample.project.demo.models.ExperimentsCategory;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 
@@ -17,10 +18,5 @@ public class DashboardController {
         return mongoConfig.mongoOperations().findAll(ExperimentsCategory.class,"experiment_category");
 
     }
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
-    public void userLoginIn() throws Exception{
-
-    }
-
 
 }

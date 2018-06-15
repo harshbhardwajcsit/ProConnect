@@ -319,7 +319,7 @@ a img{
 .android-wear-section {
   position: relative;
   background-size: cover;
-  height: 800px;
+  height: 500px;
 }
 
 .android-wear-band {
@@ -444,7 +444,7 @@ a img{
 }
 
 .android-footer {
-  background-color: #fafafa;
+  background-color: #37474f;
   position: relative;
 }
 

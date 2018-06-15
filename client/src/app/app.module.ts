@@ -16,6 +16,7 @@ import {AddExpComponent} from "./components/experiments/add-exp/add-exp.componen
 import {EditExpComponent} from "./components/experiments/edit-exp/edit-exp.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MDBBootstrapModule} from "angular-bootstrap-md";
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AppMaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot(),
     RouterModule.forRoot([
       {
         path:'',
@@ -53,10 +55,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         component:ExperimentsNameComponent
       }
       ,{
-        path:'login',
-        component:LoginUserComponent
-      },
-      {
         path:'add-experiment',
         component:AddExpComponent
       }

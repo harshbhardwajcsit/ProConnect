@@ -2,6 +2,12 @@
 <mat-toolbar-row>
   <span class="title">{{title}}</span>
   <span class="example-spacer"></span>
+  <div class="categorySelect">
+    <select *ngFor="let category of experimentCategories">
+      <option value="">{{category.displayName}}<option>
+    </select>
+
+  </div>
   <mat-button class="addExperiment" (click)="addNewExperiment()">
     Submit Experiment
   </mat-button>

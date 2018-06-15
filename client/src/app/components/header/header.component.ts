@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {MatToolbarModule} from "@angular/material";
 import {LoginServiceService} from "../../services/loginService/login-service.service";
+import {FetchExperimentCategoriesService} from "../../services/fetchCategoriesService/fetch-experiment-categories.service";
 
 @Component({
   selector: 'app-header',
@@ -10,8 +11,8 @@ import {LoginServiceService} from "../../services/loginService/login-service.ser
 })
 export class HeaderComponent implements OnInit {
   title="Propeller";
-  constructor(private router:Router,private loginService: LoginServiceService){}
-
+  constructor(private router:Router,private loginService: LoginServiceService,private fetchExperimentCategoriesService:FetchExperimentCategoriesService){}
+  experimentCategories=[];
   ngOnInit() {
   }
   goHome(){
@@ -22,9 +23,13 @@ export class HeaderComponent implements OnInit {
       console.log(responseData);
     },err=>{
       console.log(err);
-    },()=>{
-      console.log("subscribe");
-    })
+    });
+
+    this.fetchExperimentCategoriesService.fetchCategories().subscribe(responseData=>{
+      this.experimentCategories=responseData;
+    },err=>{
+      console.log(err);
+    });
   }
 
   addNewExperiment(){
