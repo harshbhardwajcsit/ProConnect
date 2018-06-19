@@ -1,5 +1,10 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
+/client/node_modules
+/client/node
+/client/dist
+/client/target
+/client/
 
 ### STS ###
 .apt_generated
