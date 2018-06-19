@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
 @RestController
@@ -46,8 +47,7 @@ public class LoginController {
 
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/gmail", method = RequestMethod.GET)
-    public RedirectView googleConnectionStatus(RedirectAttributes redirectAttributes) throws Exception {
-        redirectAttributes.addAttribute("Access-Control-Allow-Origin","*");
+    public RedirectView googleConnectionStatus(HttpServletResponse response) throws Exception {
         return new RedirectView(authorize());
     }
 

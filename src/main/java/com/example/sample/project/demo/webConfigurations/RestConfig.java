@@ -7,6 +7,9 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+import javax.servlet.FilterConfig;
+import javax.servlet.http.HttpServletResponse;
+
 @Configuration
 public class RestConfig {
     @Bean
@@ -24,4 +27,5 @@ public class RestConfig {
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }
+
 }
