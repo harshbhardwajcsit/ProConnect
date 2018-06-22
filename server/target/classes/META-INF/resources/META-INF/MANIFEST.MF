@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: client
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: hbhardwaj
+Implementation-Vendor-Id: com.smartsolutions.shareprojects
+Created-By: Apache Maven 3.5.0
+Build-Jdk: 1.8.0_151
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/parent/client
+

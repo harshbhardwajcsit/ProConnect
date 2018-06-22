@@ -17,6 +17,7 @@ import {EditExpComponent} from "./components/experiments/edit-exp/edit-exp.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MDBBootstrapModule} from "angular-bootstrap-md";
+import {LoginServiceService} from "./services/loginService/login-service.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,7 @@ import {MDBBootstrapModule} from "angular-bootstrap-md";
     ])
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  providers: [FetchExperimentCategoriesService,FetchExperimentsWithTagService],
+  providers: [FetchExperimentCategoriesService,FetchExperimentsWithTagService,LoginServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

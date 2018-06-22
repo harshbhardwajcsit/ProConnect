@@ -1,0 +1,12 @@
+com\smartsolutions\shareprojects\controller\UserController.class
+com\smartsolutions\shareprojects\webConfigurations\MongoConfig.class
+com\smartsolutions\shareprojects\controller\DashboardController.class
+com\smartsolutions\shareprojects\models\ProjectModel.class
+com\smartsolutions\shareprojects\models\UserModel.class
+com\smartsolutions\shareprojects\repositories\DashboardDataRepository.class
+com\smartsolutions\shareprojects\models\ExperimentsCategory.class
+com\smartsolutions\shareprojects\controller\ExperimentController.class
+com\smartsolutions\shareprojects\controller\LoginController.class
+com\smartsolutions\shareprojects\webConfigurations\RestConfig.class
+com\smartsolutions\shareprojects\repositories\UserInfoRepository.class
+com\smartsolutions\shareprojects\Application.class
